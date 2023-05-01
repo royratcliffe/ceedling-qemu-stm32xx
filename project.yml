@@ -1,0 +1,82 @@
+---
+:project:
+  :build_root: build
+  :use_exceptions: FALSE
+
+:test_build:
+  :use_assembly: TRUE
+
+:paths:
+  :test:
+    - +:test/**
+    - -:test/support
+  :source:
+    - src/**
+    - Core/Src/**
+  :include:
+    - inc/**
+    - Core/Inc/**
+    - Drivers/**
+  :support:
+    - test/support
+    - Core/Startup
+
+:extension:
+  :executable: .elf
+
+:files:
+  :support:
+    - +:test/support/startup.c
+    - +:Core/Startup/startup_stm32f405rgtx.s
+    - +:Core/Src/system_stm32f4xx.c
+    - +:Core/Src/syscalls.c
+
+:defines:
+  :common: &common_defines
+    - STM32F405xx
+  :test:
+    - *common_defines
+    - TEST
+
+:unity:
+  :defines:
+    - UNITY_EXCLUDE_SETJMP_H
+
+:tools:
+  :test_compiler:
+    :executable: arm-none-eabi-gcc
+    :arguments:
+      - -I$: COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR
+      - -D$: COLLECTION_DEFINES_TEST_AND_VENDOR
+      - -g3
+      - -mcpu=cortex-m4
+      - -mthumb
+      - -std=gnu11
+      - -c ${1}
+      - -o ${2}
+  :test_assembler:
+    :executable: arm-none-eabi-as
+    :arguments:
+      - ${1}
+      - -o ${2}
+  :test_linker:
+    :executable: arm-none-eabi-gcc
+    :arguments:
+      - -g3
+      - -T STM32F405RGTX_FLASH.ld
+      - ${1}
+      - -o ${2}
+  :test_fixture:
+    :executable: qemu-system-arm
+    :arguments:
+      - -machine netduinoplus2
+      - -nographic # disable graphical output and redirect serial I/Os to console
+      - -no-reboot # exit instead of rebooting
+      - -kernel ${1}
+
+:plugins:
+  :enabled:
+    - xml_tests_report
+    - stdout_pretty_tests_report
+    - module_generator
+...

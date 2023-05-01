@@ -1,0 +1,14 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "(qemu) Ceedling",
+            "type": "shell",
+            "command": "qemu-system-arm -M netduino2 -no-reboot -nographic -kernel '${workspaceFolder}/build/test/out/${command:ceedlingExplorer.debugTestExecutable}' -S -s",
+            "isBackground": true,
+            "group": "test"
+        }
+    ]
+}
