@@ -11,7 +11,7 @@
             "program": "${workspaceFolder}/build/test/out/${command:ceedlingExplorer.debugTestExecutable}",
             "cwd": "${workspaceFolder}",
             "MIMode": "gdb",
-            "miDebuggerPath": "arm-none-eabi-gdb.exe",
+            "miDebuggerPath": "arm-none-eabi-gdb",
             "miDebuggerServerAddress": "localhost:1234",
             "preLaunchTask": "(qemu) Ceedling",
             "setupCommands": [
