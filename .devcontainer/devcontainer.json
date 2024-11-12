@@ -1,0 +1,10 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+			"upgradePackages": true,
+			"packages": "qemu-system-arm,gcc-arm-none-eabi,ruby2.7"
+		},
+		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
+	}
+}
