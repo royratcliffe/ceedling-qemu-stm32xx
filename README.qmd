@@ -39,6 +39,12 @@ ceedling (0.31.1)
 ```
 Ceedling at this version requires Ruby 2, as previously mentioned.
 
+### Linux Kit
+
+Linux has similar requirements. APT makes older versions available. Homebrew has slightly newer editions, however.
+
+qemu-system-arm,gcc-arm-none-eabi,ruby2.7
+
 ## Project YAML
 
 Ceedling uses a YAML file to configure the testing build. Sources live in `src` by default, tests in `test` and test-support sources in `test/support`. This is the _minimal_ `package.yml`:
