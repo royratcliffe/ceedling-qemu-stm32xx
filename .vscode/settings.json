@@ -1,5 +1,8 @@
 {
     "task.problemMatchers.neverPrompt": {
         "debug": true,
-    }
+    },
+    // Enable native test explorer for Ceedling tests.
+    // Requires the "Ceedling Test Explorer" extension.
+    "testExplorer.useNativeTesting": true
 }
