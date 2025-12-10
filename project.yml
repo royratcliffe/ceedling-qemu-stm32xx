@@ -30,6 +30,7 @@
     - +:Core/Startup/startup_stm32f405rgtx.s
     - +:Core/Src/system_stm32f4xx.c
     - +:Core/Src/syscalls.c
+    - +:Core/Src/sysmem.c
 
 :defines:
   :common: &common_defines
