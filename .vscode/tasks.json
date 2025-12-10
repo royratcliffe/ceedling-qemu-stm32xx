@@ -14,6 +14,18 @@
             //
             "command": "qemu-system-arm -M netduinoplus2 -no-reboot -nographic -kernel '${workspaceFolder}/build/test/out/test_foo/test_foo.elf' -S -s -d int",
             "isBackground": true,
+            "problemMatcher": {
+                "owner": "qemu",
+                "pattern": {
+                    "regexp": "^(.*)$",
+                    "message": 1
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".",
+                    "endsPattern": ".*"
+                }
+            },
             "group": "test"
         }
     ]
