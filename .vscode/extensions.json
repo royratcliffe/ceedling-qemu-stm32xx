@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "throw-the-switch.vscode-ceedling"
+        "throw-the-switch.vscode-ceedling",
+        "ms-vscode.cpptools-extension-pack",
+        "marus25.cortex-debug"
     ]
 }
