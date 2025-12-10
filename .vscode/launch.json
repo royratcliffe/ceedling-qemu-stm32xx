@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
+            "name": "ceedling",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/test/out/${command:ceedlingExplorer.debugTestExecutable}",
+            "program": "${workspaceFolder}/build/test/out/test_foo/test_foo.elf",
             "cwd": "${workspaceFolder}",
             "MIMode": "gdb",
             "miDebuggerPath": "arm-none-eabi-gdb",
