@@ -48,7 +48,8 @@
     :executable: arm-none-eabi-gcc
     :arguments:
       - -I$: COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR
-      - -D$: COLLECTION_DEFINES_TEST_AND_VENDOR
+      - -DTEST
+      - -DSTM32F405xx
       - -g3
       - -mcpu=cortex-m4
       - -mthumb
