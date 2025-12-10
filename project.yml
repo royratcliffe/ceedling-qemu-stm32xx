@@ -49,6 +49,7 @@
     :arguments:
       - -I$: COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR
       - -DTEST
+      - -DUNITY_EXCLUDE_SETJMP_H
       - -DSTM32F405xx
       - -g3
       - -mcpu=cortex-m4
