@@ -34,10 +34,10 @@
 
 :defines:
   :common: &common_defines
-    - STM32F405xx
+  - STM32F405xx
   :test:
-    - *common_defines
-    - TEST
+  - *common_defines
+  - TEST
 
 :unity:
   :defines:
