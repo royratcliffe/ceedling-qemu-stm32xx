@@ -82,4 +82,14 @@
     - report_tests_log_factory
     - report_tests_pretty_stdout
     - module_generator
+
+# Configuration for report_tests_log_factory plugin.
+# Generates test reports in various formats.
+# See https://github.com/ThrowTheSwitch/Ceedling/blob/master/plugins/report_tests_log_factory/README.md
+# for more details.
+:report_tests_log_factory:
+  :reports:
+    - cppunit
+  :cppunit:
+    :filename: cppunit_tests_report.xml
 ...
