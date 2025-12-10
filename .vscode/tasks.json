@@ -6,7 +6,13 @@
         {
             "label": "(qemu) Ceedling",
             "type": "shell",
-            "command": "qemu-system-arm -M netduino2 -no-reboot -nographic -kernel '${workspaceFolder}/build/test/out/${command:ceedlingExplorer.debugTestExecutable}' -S -s",
+            // Use `-d int` to debug interrupts and CPU exceptions. Use these
+            // lines for the problem matcher to detect QEMU startup.
+            //
+            //  Loaded reset SP 0x0 PC 0x0 from vector table
+            //  Loaded reset SP 0x20020000 PC 0x80024e9 from vector table
+            //
+            "command": "qemu-system-arm -M netduinoplus2 -no-reboot -nographic -kernel '${workspaceFolder}/build/test/out/test_foo/test_foo.elf' -S -s -d int",
             "isBackground": true,
             "group": "test"
         }
