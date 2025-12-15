@@ -1,5 +1,8 @@
 {
 	"image": "throwtheswitch/madsciencelab-arm-none-eabi-plugins:latest",
 	"features": {
+		"ghcr.io/devcontainers-extra/features/apt-packages:1": {
+			"packages": "qemu-system-arm"
+		}
 	}
 }
