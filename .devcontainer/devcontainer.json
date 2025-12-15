@@ -1,10 +1,5 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"image": "throwtheswitch/madsciencelab-arm-none-eabi-plugins:latest",
 	"features": {
-		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-			"upgradePackages": true,
-			"packages": "qemu-system-arm,gcc-arm-none-eabi,ruby2.7"
-		},
-		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
 	}
 }
